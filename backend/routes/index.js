@@ -14,5 +14,9 @@ router.post('/login', authController.login);
 
 //Faculty Actions
 router.post('/addSubject', facultyActions.createSubjectByTeacher);
+router.post('/listSubjectsFaculty', facultyActions.listSubjectsByTeacher);
+router.post('/addStudent2Subject', facultyActions.addStudentToSubject);
+router.post('/listSubjectEnrolled', facultyActions.listEnrolledStudents);
+router.post('/createAssignment', facultyActions.createAssignmentForSubject);
 
-module.exports = router;
+module.exports = router;  

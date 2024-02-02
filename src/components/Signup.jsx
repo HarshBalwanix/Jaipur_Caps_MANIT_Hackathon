@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Signup = ({ setAuthState }) => {
@@ -45,21 +46,22 @@ const Signup = ({ setAuthState }) => {
           <button className="active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-4 bg-violet-500 rounded-xl text-white font-bold text-lg">
             Create Account
           </button>
-          <button
+          {/* <button
             // onClick={() => setAuthState("login")}
             className="flex items-center justify-center gap-2 active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-4  rounded-xl text-gray-700 font-semibold text-lg border-2 border-gray-100 "
           >
             Sign in
-          </button>
+          </button> */}
         </div>
         <div className="mt-8 flex justify-center items-center">
           <p className="font-medium text-base">Already have an account?</p>
-          <button
+          <Link
+            href={"/signin"}
             // onClick={() => setAuthState("login")}
             className="ml-2 font-medium text-base text-violet-500"
           >
             Sign in
-          </button>
+          </Link>
         </div>
       </div>
     </div>

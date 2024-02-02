@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+### Project Idea: Automated Assigment Submission(PS-4)
 
-First, run the development server:
+## Overview
+- This project aims to create an Automated Assigment Submission with role-based access for both administrators (teachers) and students. The system includes features such as adding subjects, managing students, handling assignments, grading, and providing feedback.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+### Admin Dashboard
+- Add Subject : Admins can add subjects to the system.
+- Option to add students to each subject.
+- All Subjects List: View a list of all subjects.
+- See the number of students enrolled in each subject.
+- Students Group: Create student groups within subjects.
+- Ability to create assignments within groups.
+- Create Assignment : Specify due dates for assignments.
+- Assignments can include PDFs or text content.
+- Provide the actual answer for reference.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## View Assignments:
+- View assignments with predicted marks.
+- Modify marks if needed.
+- Check plagiarism percentage.
+- Send feedback to students.
+- Option to revert feedback.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Student Profile:
+- Access student profiles.
+- View gradebooks, assignments, and classes enrolled.
+- Check overall plagiarism for each student.
+- Student Dashboard
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Dashboard:
+- Overview of due assignments, submitted assignments, and grading status.
 
-## Learn More
+## My Details:
+- View and update personal details.
+- See group assignments and individual assignments.
 
-To learn more about Next.js, take a look at the following resources:
+## Gradebook:
+- Check subject-wise grades.
+- View all assignments and grades.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Assignments:
+- Attach text or PDF for submission.
+- Ensure submissions with plagiarism less than 50%.
+- View plagiarism status before submission.

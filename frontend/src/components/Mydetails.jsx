@@ -2,47 +2,43 @@ import React from "react";
 
 const MyDetails = () => {
   return (
-    <div className="bg-gray-200 w-2/3 mx-auto justify-center p-6 rounded-md shadow-md">
-      <div className="flex flex-row mb-4 items-center">
-        {/* <div className="mb-2 mr-2">
-          <span className="font-bold pr-4 rounded-xl px-12 py-2 inline-block bg-gray-800 text-white ">
-            Name:
-          </span>
-          <div className="bg-white p-2 rounded-md">John Doe</div>
-        </div> */}
-        <div className="mb-2 mr-4">
-          <span className="font-bold pr-4 rounded-xl px-12 py-2 inline-block bg-gray-800 text-white">
-            Name:
-          </span>
+    <div className="rounded-3xl bg-zinc-100 max-w-[632px] min-h-[396px] mx-auto">
+      <div className=" p-20">
+        <div className="flex flex-row mb-4  ">
+          <div className="p-1 bg-neutral-600 rounded-md text-white font-bold w-40 mr-4">
+            <span className=" pr-4 rounded-xl  ">Name:</span>
+          </div>
+          <div className="p-2 bg-neutral-600 rounded-md text-white font-bold w-80">
+            John Doe
+          </div>
         </div>
-        <div className="bg-white p-2 rounded-md">John Doe</div>
-      </div>
 
-      <div className="flex flex-row mb-4 items-center">
-        <div className="mb-2 mr-4">
-          <span className="font-bold pr-4 rounded-xl px-12 py-2 inline-block bg-gray-800 text-white">
-            Roll Number:
-          </span>
+        <div className="flex flex-row mb-4 ">
+          <div className="p-1 bg-neutral-600 rounded-md text-white font-bold w-40 mr-4">
+            <span className="pr-4 rounded-xl">Roll Number:</span>
+          </div>
+          <div className="p-2 bg-neutral-600 rounded-md text-white font-bold w-80">
+            123456
+          </div>
         </div>
-        <div className="bg-white p-2 rounded-md">123456</div>
-      </div>
 
-      <div className="flex flex-row mb-4 items-center">
-        <div className="mb-2">
-          <span className="font-bold pr-4 rounded-xl px-12 py-2 inline-block bg-gray-800 text-white">
-            Class ID:
-          </span>
+        <div className="flex flex-row mb-4 ">
+          <div className="p-1 bg-neutral-600 rounded-md text-white font-bold w-40 mr-4">
+            <span className="pr-4 rounded-xl">Class ID:</span>
+          </div>
+          <div className="p-2 text-white font-bold rounded-md bg-neutral-600 w-80">
+            A101
+          </div>
         </div>
-        <div className="bg-white p-2 rounded-md">A101</div>
-      </div>
 
-      <div className="flex flex-row mb-4 items-center">
-        <div className="mb-2">
-          <span className="font-bold pr-4 rounded-xl px-12 py-2 inline-block bg-gray-800 text-white">
-            Phone Number:
-          </span>
+        <div className="flex flex-row mb-4 ">
+          <div className="p-1 bg-neutral-600 rounded-md text-white font-bold w-40 mr-4">
+            <span className="pr-4 rounded-xl">Phone Number:</span>
+          </div>
+          <div className="text-white font-bold p-2 rounded-md bg-neutral-600 w-80">
+            123-456-7890
+          </div>
         </div>
-        <div className="bg-white p-2 rounded-md">123-456-7890</div>
       </div>
     </div>
   );

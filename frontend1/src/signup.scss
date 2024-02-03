@@ -1,0 +1,750 @@
+ @media only screen and (max-width: 768px) {
+     .signup {
+         display: flex;
+         flex-direction: column;
+
+
+         .left-content {
+             display: flex;
+             flex: 5;
+             padding: 16px;
+             .card {
+                 height: 250px;
+                 display: flex;
+                 flex-direction: column;
+                 align-items: start;
+                 background: #FCEE21;
+                 justify-content: center;
+                 border-radius: 25px;
+               
+                 .row{
+                     display: flex;
+                     flex-direction: row;
+                     align-items: center;
+                     justify-content: space-between;
+                     padding-top: 10px;
+                     padding-right: 15px;
+                     padding-left: 15px;
+                     .logo {
+                         height: 26.94px;
+                         position: absolute;
+                         top:10%;
+                         left:5%;
+                     }
+                     .login-display-image {
+                         width: 60%;
+                         margin-left: 40%;
+                     }
+                 }
+                
+                 .row1{
+                     display: flex;
+                     flex-direction: column;
+                     align-items: start;
+                     justify-content: space-evenly;
+                     height: 100%;
+             
+                     .title {
+                         font-family: 'Manrope';
+                         font-style: normal;
+                         font-weight: 700;
+                         font-size: max(15px, 3.5vw);
+                         margin-left: 20px;
+                         margin-bottom: 0;
+                         width: max-content;
+                         line-height: 133.52%;
+                         /* or 53px */
+                         color: #000000;
+                     }
+                     .subtitle {
+                         font-family: 'Manrope';
+                         font-style: normal;
+                         font-weight: 400;
+                         width: 80%;
+                         font-size: max(10px, 1.8vw);
+                         margin: 0px 0px 20px 20px;
+                         line-height: 133.52%;
+                         /* or 27px */
+                         letter-spacing: 0.03em;
+                         color: #4F4F4F;
+                     }
+                 }
+             }
+         }
+         .right-content {
+             display: flex;
+             flex: 5;
+             margin: 0 7vw;
+             display: flex;
+             flex-direction: column;
+             align-items: start;
+             justify-content: center;
+             text-align: center;
+             .title {
+                 font-family: 'Manrope';
+                 font-style: normal;
+                 font-weight: 700;
+                 font-size: 24px;
+                 line-height: 133.52%;
+                 letter-spacing: 0.03em;
+                 color: #000000;
+             }
+             .continue-with-google {
+                 display: flex;
+                 flex-direction: row;
+                 align-items: center;
+                 justify-content: center;
+                 background: #F0F0F0;
+                 border: 1px solid #343434;
+                 margin-top: 5%;
+                 border-radius: 16px;
+                 width: 100%;
+                 height: 45px;
+                 gap: 16px;
+                 cursor: pointer;
+                 .continue-google-image
+                 {
+                     height: 15px;
+                     width: 15px;
+                 }
+                 .continue-google-text
+                 {
+                 
+                     font-size: 12px;
+                 }
+             }
+             .or {
+                 width: 100%;
+                 font-family: 'Manrope';
+                 font-style: normal;
+                 font-weight: 700;
+                 text-align: center;
+                 font-size: 16px;
+                 margin-top: 2%;
+                 line-height: 22px;
+                 /* identical to box height */
+                 color: #000000;
+             }
+             form {
+                 width: 100%;
+                 ::placeholder {
+                     font-family: 'Manrope';
+                     font-style: normal;
+                     font-weight: 400;
+                     line-height: 22px;
+                     /* identical to box height */
+                     color: #353535;
+                 }
+                 .name-section {
+                     // display: flex;
+                     gap: 10%;
+                     .input-feild {
+                         width: 100%;
+                     }
+                 }
+                 .input-feild {
+                     flex: 1;
+                     background: #F0F0F0;
+                     border: 1px solid #D9D9D9;
+                     border-radius: 16px;
+                     height: 47px;
+                     width: 100%;
+                     margin: 16px 0;
+                     padding: 8px;
+                     font-size: 12px;
+                     color: #343434;
+                     text-indent: 20px;
+                     box-sizing: border-box;
+                     &:focus {
+                         padding: 0.5rem;
+                         border: double 1px transparent;
+                         border-radius: 16px;
+                         background-image: linear-gradient(#F0F0F0, #F0F0F0), linear-gradient(91.81deg, #FF174F 3.9%, #9999FF 98.88%);
+                         background-origin: border-box;
+                         background-clip: padding-box, border-box;
+                         outline: none;
+                     }
+                 }
+                 .create-account-button {
+                     display: flex;
+                     background: #000000;
+                     border-radius: 12px;
+                     width: 100%;
+                     height: 46px;
+                     align-items: center;
+                     justify-content: center;
+                     font-family: 'Manrope';
+                     margin: 30px 0 18px 0;
+                     font-style: normal;
+                     font-weight: 700;
+                     font-size: 14px;
+                     line-height: 27px;
+                     color: #FFFFFF;
+                 }
+                 .password-section {
+                     position: relative;
+                     .password-visiblity {
+                         position: 'absolute';
+                         top: 0;
+                         right: 0;
+                     }
+                 }
+             }
+             .terms {
+                 display: flex;
+                 align-items: center;
+                 flex-direction: row;
+                 font-family: 'Manrope';
+                 font-style: normal;
+                 font-weight: 500;
+                 font-size: 12px;
+                 line-height: 133.52%;
+                 letter-spacing: 0.03em;
+                 color: #000000;
+                 padding-top: 4px;
+                 .checkbox {
+                     display: none;
+                 }
+                 .checkmark {
+                     display: inline-block;
+                     vertical-align: middle;
+                     width: 24px;
+                     height: 24px;
+                     border-radius: 50%;
+                     background-color: #CECECE;
+                     margin-right: 10px;
+                 }
+                 .checkbox:checked+.checkmark:after {
+                     content: "";
+                     display: inline-block;
+                     vertical-align: middle;
+                     width: 24px;
+                     height: 24px;
+                     border-radius: 50%;
+                     background-color: black;
+                     margin-right: 10px;
+                 }
+             }
+         }
+         .row-container{
+                 width: 100%;
+                 display: flex;
+                 flex-direction: row;
+                 justify-content: center;
+                 align-items: center;
+                 text-align: center;
+                
+                 .have-account{
+                     font-size: 12px;
+                     margin-top: 10px;
+                     margin-bottom: 60px;
+                 }
+             }
+     }
+ }
+
+ @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+     .signup {
+         display: flex;
+         flex-direction: column;
+         .left-content {
+             flex: 5;
+             padding: 30px;
+             .card {
+                 height: calc(36.4vh);
+                 display: flex;
+                 flex-direction: row;
+                 align-items: start;
+                 background: #FCEE21;
+                 justify-content: center;
+                 border-radius: 35px;
+                 padding: 0 5vw;
+                               
+                 .row{
+                     display: flex;
+                     flex-direction: column;
+                     align-items: start;
+                     justify-content: space-evenly;
+                     height: 100%;
+                     width: 40vw;
+             
+                     .logo {
+                         padding-top: 20px;
+                         height: 55px;
+                     }
+                     .login-display-image {
+                         width: 223px;
+                         border-radius: 10%;
+                         padding-bottom: 30px;
+                     }
+                 }
+
+                 .row1{
+                     width: 60vw;
+                     display: flex;
+                     flex-direction: column;
+                     align-items: start;
+                     justify-content: space-evenly;
+                     height: 100%;
+                    
+
+                     .title {
+                         padding-top: 50px;
+                         font-family: 'Manrope';
+                         font-style: normal;
+                         font-weight: 700;
+                         font-size: 32px;
+                         margin: 20px;
+                         width: min(433px, 100%);
+                         line-height: 133.52%;
+                         /* or 53px */
+                         color: #000000;
+                     }
+                     .subtitle {
+                         font-family: 'Manrope';
+                         font-style: normal;
+                         font-weight: 400;
+                         width: 100%;
+                         font-size: 16px;
+                         margin: 0px 20px 20px 20px;
+                         line-height: 133.52%;
+                         /* or 27px */
+                         letter-spacing: 0.03em;
+                         color: #4F4F4F;
+                         padding-bottom: 50px;
+                     }
+                 }
+                
+                
+             }
+         }
+         .right-content {
+             flex: 5;
+             margin: 0 7vw;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+             text-align: center;
+             .title {
+                 margin-right: 260px;
+                 font-family: 'Manrope';
+                 font-style: normal;
+                 font-weight: 700;
+                 font-size: 32px;
+                 line-height: 133.52%;
+                 letter-spacing: 0.03em;
+                 color: #000000;
+             }
+             .continue-with-google {
+                 display: flex;
+                 flex-direction: row;
+                 align-items: center;
+                 justify-content: center;
+                 background: #F0F0F0;
+                 border: 1px solid #343434;
+                 margin-top: 5%;
+                 border-radius: 16px;
+                 width: 570px;
+                 height: 53px;
+                 gap: 16px;
+                 cursor: pointer;
+                 .continue-google-image
+                 {
+                     height: 15px;
+                     width: 15px;
+                 }
+             }
+             .or {
+                 width: 100%;
+                 font-family: 'Manrope';
+                 font-style: normal;
+                 font-weight: 700;
+                 text-align: center;
+                 font-size: 16px;
+                 margin-top: 2%;
+                 line-height: 22px;
+                 /* identical to box height */
+                 color: #000000;
+             }
+             form {
+                 width: 570px;
+                 ::placeholder {
+                     font-family: 'Manrope';
+                     font-style: normal;
+                     font-weight: 400;
+                     line-height: 22px;
+                     /* identical to box height */
+                     color: #353535;
+                 }
+                 .name-section {
+                     display: flex;
+                     gap: 10%;
+                     .input-feild {
+                         width: 45%;
+                     }
+                 }
+                 .input-feild {
+                     flex: 1;
+                     background: #F0F0F0;
+                     border: 1px solid #D9D9D9;
+                     border-radius: 16px;
+                     height: 53px;
+                     width: 100%;
+                     margin: 16px 0;
+                     padding: 8px;
+                     font-size: 16px;
+                     color: #343434;
+                     text-indent: 20px;
+                     box-sizing: border-box;
+                     &:focus {
+                         padding: 0.5rem;
+                         border: double 1px transparent;
+                         border-radius: 16px;
+                         background-image: linear-gradient(#F0F0F0, #F0F0F0), linear-gradient(91.81deg, #FF174F 3.9%, #9999FF 98.88%);
+                         background-origin: border-box;
+                         background-clip: padding-box, border-box;
+                         outline: none;
+                     }
+                 }
+                 .create-account-button {
+                     display: flex;
+                     background: #000000;
+                     border-radius: 12px;
+                     width: 100%;
+                     height: 57px;
+                     align-items: center;
+                     justify-content: center;
+                     font-family: 'Manrope';
+                     margin: 30px 0 18px 0;
+                     font-style: normal;
+                     font-weight: 700;
+                     font-size: 20px;
+                     line-height: 27px;
+                     color: #FFFFFF;
+                 }
+                 .password-section {
+                     position: relative;
+                     .password-visiblity {
+                         position: 'absolute';
+                         top: 0;
+                         right: 0;
+                     }
+                 }
+             }
+             .terms {
+                 display: flex;
+                 align-items: center;
+                 flex-direction: row;
+                 font-family: 'Manrope';
+                 font-style: normal;
+                 font-weight: 500;
+                 font-size: 15px;
+                 line-height: 133.52%;
+                 letter-spacing: 0.03em;
+                 color: #000000;
+                 padding-top: 4px;
+                 .checkbox {
+                     display: none;
+                 }
+                 .checkmark {
+                     display: inline-block;
+                     vertical-align: middle;
+                     width: 27px;
+                     height: 27px;
+                     border-radius: 50%;
+                     background-color: #CECECE;
+                     margin-right: 10px;
+                 }
+                 .checkbox:checked+.checkmark:after {
+                     content: "";
+                     display: inline-block;
+                     vertical-align: middle;
+                     width: 27px;
+                     height: 27px;
+                     border-radius: 50%;
+                     background-color: black;
+                     margin-right: 10px;
+                 }
+             }
+         }
+     }
+ }
+ @media only screen and (min-width: 1024px) {
+     .signup {
+         display: flex;
+         flex-direction: row;
+         .left-content {
+             flex: 5;
+             padding: 2vh;
+             .card {
+                 height: 96vh;
+                 display: flex;
+                 flex-direction: column;
+                 align-items: start;
+                 background: #FCEE21;
+                 justify-content: center;
+                 border-radius: 35px;
+                 padding: 0 5vw;
+                 .logo {
+                     height: 4.5vh;
+                     left: 5vw;
+                 }
+                 .login-display-image {
+                     width: 100%;
+                     padding: 6vh 0%;
+                 }
+                 .title {
+                     font-family: 'Manrope';
+                     font-style: normal;
+                     font-weight: 700;
+                     font-size: 5.2vh;
+                     // font-size: 40px;
+                     line-height: 133.52%;
+                     letter-spacing: 0.03em;
+                     /* or 53px */
+                     color: #000000;
+                 }
+                 .subtitle {
+                     font-family: 'Manrope';
+                     font-style: normal;
+                     font-weight: 400;
+                     font-size: 2.5vh;
+
+                     margin-top: 3%;
+                     width: 90%;
+                     line-height: 133.52%;
+
+                     /* or 27px */
+                     letter-spacing: 0.03em;
+                     color: #4F4F4F;
+                 }
+             }
+         }
+         .right-content {
+             flex: 5;
+             margin: 0 7vw;
+             display: flex;
+             flex-direction: column;
+             align-items: start;
+             justify-content: center;
+             text-align: center;
+             margin-top: 4%;
+             .verification{
+                 display:flex;
+                 flex-direction: column;
+                 height: 90%;
+                 margin-top: 10%;
+                 .title {
+                     font-family: 'Manrope';
+                     font-style: normal;
+                     font-weight: 700;
+                     font-size: 40px;
+                     line-height: 133.52%;
+                     letter-spacing: 0.03em;
+                     color: #000000;
+                 }
+                 label{
+                     text-align: left;
+                     font-size: 18px;
+                     margin: 3%;
+                     margin-left: 0%;
+                     padding-left: 2%;
+                 }
+                 input{
+                     width: 100%;
+                     padding: 2%;
+                     border-radius: 15px;
+                     font-size: 18px;
+                     padding-left: 4%;
+                 }
+                 button{
+                     background-color: #000000;
+                     color: #F0F0F0;
+                     padding: 2%;
+                     font-size: 18px;
+                     border-radius: 15px;
+                 }
+                 img{
+                     height: 8%;
+                     width: 10%;
+                     margin-left: 45%;
+                     margin-top: 12%;
+                     margin-bottom: 8%;
+                 }
+                 p{
+                     font-size: 20px;
+                     text-align: left;
+                     margin-bottom: 2%;
+                     margin-top: 2%;
+                     padding-left: 1%;
+                     width: 80%;
+                     color: #4F4F4F;
+                 }
+
+             }
+             .title {
+                 font-family: 'Manrope';
+                 font-style: normal;
+                 font-weight: 700;
+                 font-size: 40px;
+                 line-height: 133.52%;
+                 letter-spacing: 0.03em;
+                 color: #000000;
+             }
+             .continue-with-google {
+                 display: flex;
+                 flex-direction: row;
+                 align-items: center;
+                 justify-content: center;
+                 background: #F3F3F3;
+                 border: 1px solid #343434;
+                 margin-top: 5%;
+                 border-radius: 16px;
+                 width: 100%;
+                 height: 45px;
+                 gap: 16px;
+                 font-weight: 500;
+                 cursor: pointer;
+                 .continue-google-image
+                 {
+                     height: 3vh;
+                     width: 3vh;
+                 }
+             }
+             .or {
+                 width: 100%;
+                 font-family: 'Manrope';
+                 font-style: normal;
+                 font-weight: 700;
+                 text-align: center;
+                 font-size: 16px;
+                 margin-top: 2%;
+                 line-height: 22px;
+                 /* identical to box height */
+                 color: #000000;
+             }
+             form {
+                 width: 100%;
+                 ::placeholder {
+                     font-family: 'Manrope';
+                     font-style: normal;
+                     font-weight: 400;
+                     line-height: 22px;
+                     /* identical to box height */
+                     color: #353535;
+                 }
+                 .name-section {
+                     display: flex;
+                     gap: 10%;
+                     .input-feild {
+                         width: 45%;
+                     }
+                 }
+                 .input-feild {
+                     flex: 1;
+                     background: #F3F3F3;
+                     border: 1px solid #D9D9D9;
+                     border-radius: 16px;
+                     height: 50px;
+                     width: 100%;
+                     margin: 10px 0;
+                     padding: 8px;
+                     font-size: 16px;
+                     color: #343434;
+                     text-indent: 20px;
+                     box-sizing: border-box;
+                     &:focus {
+                         padding: 0.5rem;
+                         border: double 1px transparent;
+                         border-radius: 16px;
+                         background-image: linear-gradient(#F0F0F0, #F0F0F0), linear-gradient(91.81deg, #FF174F 3.9%, #9999FF 98.88%);
+                         background-origin: border-box;
+                         background-clip: padding-box, border-box;
+                         outline: none;
+                     }
+                 }
+                 .create-account-button {
+                     display: flex;
+                     background: #000000;
+                     border-radius: 12px;
+                     width: 100%;
+                     height: 57px;
+                     align-items: center;
+                     justify-content: center;
+                     font-family: 'Manrope';
+                     margin: 30px 0 18px 0;
+                     font-style: normal;
+                     font-weight: 700;
+                     font-size: 20px;
+                     line-height: 27px;
+                     color: #FFFFFF;
+                 }
+                 .password-section {
+                     position: relative;
+                     .password-visiblity {
+                         position: 'absolute';
+                         top: 0;
+                         right: 0;
+                     }
+                 }
+             }
+             .terms {
+                 display: flex;
+                 align-items: center;
+                 flex-direction: row;
+                 font-family: 'Manrope';
+                 font-style: normal;
+                 font-weight: 500;
+                 font-size: 15px;
+                 line-height: 133.52%;
+                 letter-spacing: 0.03em;
+                 color: #000000;
+                 padding-top: 4px;
+                 .checkbox {
+                     display: none;
+                 }
+                 .checkmark {
+                     display: inline-block;
+                     vertical-align: middle;
+                     width: 27px;
+                     height: 27px;
+                     border-radius: 50%;
+                     background-color: #CECECE;
+                     margin-right: 10px;
+                     text-align: center;
+                 }
+                 .checkbox:checked+.checkmark:after {
+                     content: "";
+                     display: inline-block;
+                     vertical-align: middle;
+                     width: 27px;
+                     height: 27px;
+                     border-radius: 50%;
+                     background-color: black;
+                     margin-right: 10px;
+                 }
+             }
+             .row-container{
+                 width: 100%;
+                 display: flex;
+                 flex-direction: row;
+                 justify-content: center;
+                 text-align: center;
+
+                
+                 .have-account{
+                     font-size: 16px;
+                     margin-top: 10px;
+                     margin-bottom: 60px;
+                     display: flex;
+
+                 }
+                 .login{
+                     text-decoration: none;
+                     color:orange;
+                 }
+             }
+         }
+     }
+ }

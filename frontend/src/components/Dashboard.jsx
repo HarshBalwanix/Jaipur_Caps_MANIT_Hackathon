@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
+// import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
-import Card from "./Card";
+// import Card from "./Card";
 import AddSubject from "./AddSubject";
 import AddAssignment from "./AddAssignment";
 import DueAssignment from "./DueAssignment";

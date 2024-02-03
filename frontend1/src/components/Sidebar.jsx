@@ -46,7 +46,7 @@ const Sidebar = () => {
             </NavLink>
             <NavLink exact to="/profile" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="user" className="text-black">
-                Student Profile
+                Faculty Profile
               </CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>

@@ -8,6 +8,7 @@ import ViewAssignment from "./components/ViewAssignment";
 import StudentEnrolled from "./components/StudentEnrolled";
 import QuizComponent from "./components/QuizComponent";
 import AddAssignment from "./components/AddAssignment";
+import Signup from "./components/Signup";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/studentsEnrolled" element={<StudentEnrolled />} />
         <Route path="/createquiz" element={<QuizComponent />} />
         <Route path="/addAssignment" element={<AddAssignment />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </Router>
   );

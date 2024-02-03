@@ -15,7 +15,7 @@ const Sidebar = () => {
     >
       <CDBSidebar textColor="" backgroundColor="#d9d9d9">
         <CDBSidebarHeader
-        className="bg-[#AEA0A0]"
+          className="bg-[#AEA0A0]"
           prefix={<i className="fa fa-bars fa-large "></i>}
         >
           {/* <a href="/" className="text-decoration-none" >
@@ -25,22 +25,26 @@ const Sidebar = () => {
 
         <CDBSidebarContent className="sidebar-content  ">
           <CDBSidebarMenu className="text-black">
-            <NavLink exact to="/" activeClassName="activeClicked">
+            <NavLink
+              exact
+              to="/studentsEnrolled"
+              activeClassName="activeClicked"
+            >
               <CDBSidebarMenuItem icon="users" className="text-black">
                 Student Enrolled
               </CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/tables" activeClassName="activeClicked">
+            <NavLink exact to="/addAssignment" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="plus" className="text-black">
                 Add Assignment
               </CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/profile" activeClassName="activeClicked">
+            <NavLink exact to="/viewAssignment" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="chart-line" className="text-black">
                 View Assignment
               </CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/analytics" activeClassName="activeClicked">
+            <NavLink exact to="/profile" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="user" className="text-black">
                 Student Profile
               </CDBSidebarMenuItem>

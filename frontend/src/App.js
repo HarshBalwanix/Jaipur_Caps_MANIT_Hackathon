@@ -6,6 +6,8 @@ import AddSubject from "./components/AddSubject";
 import CreatedSubjectList from "./components/Subjectlist";
 import ViewAssignment from "./components/ViewAssignment";
 import StudentEnrolled from "./components/StudentEnrolled";
+import QuizComponent from "./components/QuizComponent";
+import AddAssignment from "./components/AddAssignment";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/listSubject" element={<CreatedSubjectList />} />
         <Route path="/viewAssignment" element={<ViewAssignment />} />
         <Route path="/studentsEnrolled" element={<StudentEnrolled />} />
+        <Route path="/createquiz" element={<QuizComponent />} />
+        <Route path="/addAssignment" element={<AddAssignment />} />
       </Routes>
     </Router>
   );

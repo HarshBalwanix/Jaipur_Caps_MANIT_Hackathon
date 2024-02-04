@@ -10,6 +10,9 @@ import QuizComponent from "./components/QuizComponent";
 import AddAssignment from "./components/AddAssignment";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Fprofile from "./components/Fprofile";
+import MyDetails from "./components/Mydetails";
+import SubjectDetails from "./components/SubjectDetails";
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
         <Route path="/createquiz" element={<QuizComponent />} />
         <Route path="/addAssignment" element={<AddAssignment />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/subdetails" element={<SubjectDetails />} />
+
+        <Route path="/fdetails" element={<Fprofile />} />
       </Routes>
     </Router>
   );

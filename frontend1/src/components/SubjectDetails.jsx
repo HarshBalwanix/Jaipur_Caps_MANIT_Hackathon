@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
-import Card from "./Card";
 import AddSubject from "./AddSubject";
 import AddAssignment from "./AddAssignment";
-import DueAssignment from "./DueAssignment";
-import SubjectsList from "./SubjectsList";
 import StudentsList from "./StudentList";
 import FAssignmentsList from "./FAssignmentList";
-// import MyDetails from "./Mydetails";
+import AssignmentPage from "./AssignmentSubmissionPage";
 
-function Dashboard() {
+function SubjectDetails() {
   const [addSubject, toggleAddSubject] = useState(false);
   const [createAssignement, toggleCreateAssignment] = useState(false);
   const [menu, toggleMenu] = useState(true);
@@ -53,11 +49,11 @@ function Dashboard() {
           />
         ) : null}
         {menu ? (
-          <div className="flex flex-wrap gap-4 m-4 ">
-            <DueAssignment />
-            <SubjectsList />
-            {/* <StudentsList /> */}
-            {/* <FAssignmentsList /> */}
+          <div className="flex flex-wrap gap-16 m-4 justify-end  ">
+            <StudentsList />
+            <FAssignmentsList />
+            {/* <SubmittedAssignments /> */}
+            <AssignmentPage />
           </div>
         ) : null}
         {/* <div>
@@ -68,4 +64,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default SubjectDetails;

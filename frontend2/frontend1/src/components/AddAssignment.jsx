@@ -6,11 +6,40 @@ const AddAssignment = ({ onClick, func }) => {
   const [dueTime, setDueTime] = useState("");
   const [assignmentFile, setAssignmentFile] = useState(null);
   const [answerFile, setAnswerFile] = useState(null);
-
-  const [user, setUser] = useState(null);
+  const [selectedSubjectId, setSelectedSubjectId] = useState(""); // State for selected subject ID
+  const [subjects, setSubjects] = useState([]); // State for storing the list of subjects
 
   useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem("user")));
+    // Fetch the list of subjects from your API when the component mounts
+    const fetchSubjects = async () => {
+      try {
+        // Replace '65bce5ed3d243a022404daab' with the actual teacherId (user_id)
+        const teacherId = localStorage.getItem("user_id");
+        const response = await fetch(
+          "http://localhost:3000/listSubjectsFaculty",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ teacherId }),
+          }
+        );
+
+        if (response.ok) {
+          const data = await response.json();
+          setSubjects(data); // Set the list of subjects in state
+        } else {
+          console.error("Error fetching subjects:", response.statusText);
+          // Handle errors gracefully (e.g., display an error message)
+        }
+      } catch (error) {
+        console.error("Error fetching subjects:", error);
+        // Handle errors gracefully (e.g., display an error message)
+      }
+    };
+
+    fetchSubjects();
   }, []);
 
   const handleAssignmentNameChange = (e) => {
@@ -35,38 +64,56 @@ const AddAssignment = ({ onClick, func }) => {
     setAnswerFile(file);
   };
 
+  const handleSubjectChange = (e) => {
+    setSelectedSubjectId(e.target.value); // Update the selected subject ID in state
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    const formattedDueDate = new Date(`${dueDate}T${dueTime}`).toLocaleString(
+      "en-GB",
+      {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      }
+    );
     // Perform further actions with the assignment details and files
     console.log("Assignment Name:", assignmentName);
     console.log("Due Date:", dueDate);
     console.log("Due Time:", dueTime);
     console.log("Assignment File:", assignmentFile);
     console.log("Answer File:", answerFile);
+    console.log("Selected Subject ID:", selectedSubjectId); // Include selected subject ID in your data
 
-    // Take items from user variable.
+    // Send this data to your backend for further processing
     fetch("http://localhost:3000/createAssignment", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json", // Set the content type to application/json
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        name: assignmentName,
-        due: dueDate,
+        subjectId: selectedSubjectId,
+        teacherId: localStorage.getItem("user_id"),
+        assignmentDetails: {
+          name: assignmentName,
+          due: formattedDueDate,
+          problemStatement: "problemStatement",
+          answerpdf: "answer",
+        },
       }),
     }).then((data) => {
       data.json().then((data) => {
-        // Se
+        // Handle the response from the server
       });
     });
-
-    // You can now send this data to your backend for further processing
   };
 
   return (
     <div className="h-screen add-assignment-container ">
-      <div className="relative  overflow-y-hidden">
+      <div className="relative overflow-y-hidden">
         <button
           className="absolute top-0 left-0 m-4"
           onClick={(e) => onClick(e, func)}
@@ -166,6 +213,31 @@ const AddAssignment = ({ onClick, func }) => {
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 required
               />
+            </div>
+
+            {/* Subject Dropdown */}
+            <div>
+              <label
+                htmlFor="subject"
+                className="block text-sm font-semibold text-gray-600"
+              >
+                Select Subject:
+              </label>
+              <select
+                id="subject"
+                name="subject"
+                value={selectedSubjectId}
+                onChange={handleSubjectChange}
+                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                required
+              >
+                <option value="">Select a Subject</option>
+                {subjects.map((subject) => (
+                  <option key={subject._id} value={subject._id}>
+                    {subject.name}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div>

@@ -55,4 +55,4 @@ This project aims to create an Automated Graded System with role-based access fo
 - View plagiarism status before submission.
 
 
-##This project was submitted for MANIT Hackathon'24 . 
+## This project was submitted for MANIT Hackathon'24 . 

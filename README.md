@@ -53,3 +53,6 @@ This project aims to create an Automated Graded System with role-based access fo
 - Attach text or PDF for submission.
 - Ensure submissions with plagiarism less than 50%.
 - View plagiarism status before submission.
+
+
+##This project was submitted for MANIT Hackathon'24 . 

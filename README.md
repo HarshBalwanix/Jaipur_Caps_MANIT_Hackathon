@@ -54,5 +54,9 @@ This project aims to create an Automated Graded System with role-based access fo
 - Ensure submissions with plagiarism less than 50%.
 - View plagiarism status before submission.
 
+### Team Members
+- Harsh Balwani
+- Aneesh Rijhwani
+
 
 ## This project was submitted for MANIT Hackathon'24 . 
